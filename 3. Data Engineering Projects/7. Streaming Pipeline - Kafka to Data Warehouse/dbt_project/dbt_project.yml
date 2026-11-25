@@ -1,0 +1,32 @@
+name: 'kafka_warehouse'
+version: '1.0.0'
+config-version: 2
+
+# Matches the profile in profiles.yml
+profile: 'kafka_warehouse'
+
+model-paths: ["models"]
+snapshot-paths: ["snapshots"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+clean-targets: ["target", "dbt_packages", "logs"]
+
+models:
+  kafka_warehouse:
+    staging:
+      +materialized: view
+      +schema: staging
+      +tags: ["staging"]
+    marts:
+      +materialized: table
+      +schema: marts
+      +tags: ["marts"]
+
+snapshots:
+  kafka_warehouse:
+    +target_schema: snapshots
+    +tags: ["snapshots"]
+
+vars:
+  # Lookback applied to incremental models so late corrections are re-processed.
+  incremental_lookback_hours: 2

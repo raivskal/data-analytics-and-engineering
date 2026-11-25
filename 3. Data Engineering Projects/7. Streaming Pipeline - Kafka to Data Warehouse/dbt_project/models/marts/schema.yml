@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: >
+      Order-level fact, merged incrementally by order_id. The last
+      `incremental_lookback_hours` are reprocessed on every run so late
+      corrections propagate without a full refresh.
+    columns:
+      - name: order_id
+        data_tests: [unique, not_null]
+      - name: customer_id
+        data_tests:
+          - not_null
+          # Warning (not error): a customer can appear on an order before the CRM
+          # has emitted any customer event, so the dimension may lag behind.
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+              config:
+                severity: warn
+      - name: status
+        data_tests:
+          - accepted_values:
+              values: ["created", "paid", "shipped", "cancelled"]
+      - name: order_amount
+        data_tests: [not_null]
+      - name: captured_amount
+        data_tests: [not_null]
+
+  - name: dim_customers
+    description: >
+      Customer dimension covering every customer seen in the CDC topic or on an
+      order. `is_known_customer` flags rows that exist only because an order
+      referenced them before the CRM emitted a change event.
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
+      - name: is_known_customer
+        data_tests: [not_null]
+      - name: is_repeat_customer
+        data_tests: [not_null]
+
+  - name: agg_revenue_hourly
+    description: Revenue per hour and currency, replaced per (order_hour, currency).
+    columns:
+      - name: order_hour
+        data_tests: [not_null]
+      - name: currency
+        data_tests: [not_null]
+      - name: gross_revenue
+        data_tests: [not_null]

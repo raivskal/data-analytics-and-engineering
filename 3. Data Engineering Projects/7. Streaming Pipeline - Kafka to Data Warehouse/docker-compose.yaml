@@ -1,0 +1,212 @@
+name: kafka-warehouse
+
+# Shared environment for every app container: service DNS names, not localhost.
+x-app-env: &app-env
+  KAFKA_BOOTSTRAP_SERVERS: kafka:19092
+  SCHEMA_REGISTRY_URL: http://schema-registry:8081
+  POSTGRES_HOST: postgres
+  POSTGRES_PORT: "5432"
+
+x-app: &app
+  build:
+    context: .
+    dockerfile: docker/app/Dockerfile
+  image: kafka-warehouse-app:local
+  env_file:
+    - .env
+  environment:
+    <<: *app-env
+  volumes:
+    - ./:/app
+  working_dir: /app
+
+services:
+  # ---------------------------------------------------------------- streaming
+  kafka:
+    image: apache/kafka:3.9.1
+    container_name: kw-kafka
+    ports:
+      - "9092:9092"          # host listener for tools running on your laptop
+    environment:
+      CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller          # single-node KRaft: no ZooKeeper
+      KAFKA_LISTENERS: PLAINTEXT://:19092,CONTROLLER://:19093,PLAINTEXT_HOST://:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:19092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:19093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      # Topic creation is explicit (src/setup/init_topics.py), never implicit.
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:19092 --list >/dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 20
+      start_period: 20s
+
+  schema-registry:
+    image: confluentinc/cp-schema-registry:7.7.1
+    container_name: kw-schema-registry
+    ports:
+      - "8081:8081"
+    environment:
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8081
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: PLAINTEXT://kafka:19092
+      SCHEMA_REGISTRY_KAFKASTORE_TOPIC_REPLICATION_FACTOR: 1
+      SCHEMA_REGISTRY_SCHEMA_COMPATIBILITY_LEVEL: backward
+    depends_on:
+      kafka:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/subjects"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:v0.7.2
+    container_name: kw-kafka-ui
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:19092
+      KAFKA_CLUSTERS_0_SCHEMAREGISTRY: http://schema-registry:8081
+      DYNAMIC_CONFIG_ENABLED: "false"
+    depends_on:
+      kafka:
+        condition: service_healthy
+
+  # ---------------------------------------------------------------- warehouse
+  postgres:
+    image: postgres:16-alpine
+    container_name: kw-postgres
+    ports:
+      - "${POSTGRES_HOST_PORT:-5434}:5432"
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-warehouse}
+      POSTGRES_USER: ${POSTGRES_USER:-warehouse}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-warehouse}
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+      - ./docker/postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-warehouse} -d ${POSTGRES_DB:-warehouse}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  # ------------------------------------------------------------------ pipeline
+  topics-init:
+    <<: *app
+    command: src.setup.init_topics
+    restart: "no"
+    depends_on:
+      kafka:
+        condition: service_healthy
+      schema-registry:
+        condition: service_healthy
+
+  producer:
+    <<: *app
+    command: src.producer.produce --count 1000 --rate 20
+    restart: "no"
+    depends_on:
+      topics-init:
+        condition: service_completed_successfully
+
+  stream-loader:
+    <<: *app
+    command: src.loader.consumer
+    environment:
+      <<: *app-env
+      # A long-running loader must never exit just because the stream is quiet.
+      CONSUME_IDLE_TIMEOUT_SECONDS: "0"
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      topics-init:
+        condition: service_completed_successfully
+
+  dbt-runner:
+    <<: *app
+    entrypoint: ["/bin/sh", "-c"]
+    command: >
+      "while true; do
+         dbt build --project-dir dbt_project --profiles-dir dbt_project || true;
+         sleep ${DBT_REFRESH_SECONDS:-300};
+       done"
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      topics-init:
+        condition: service_completed_successfully
+
+  # ------------------------------------------------------------------ monitoring
+  dashboard:
+    <<: *app
+    command: >
+      streamlit run src/monitoring/dashboard.py
+      --server.port 8501
+      --server.address 0.0.0.0
+      --server.headless true
+      --browser.gatherUsageStats false
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    depends_on:
+      kafka:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+
+  # ------------------------------------------- documented alternative sink
+  # Enable on demand:  docker compose --profile connect up -d connect
+  # Needs internet on first build (Confluent Hub connector download).
+  connect:
+    build:
+      context: .
+      dockerfile: docker/connect/Dockerfile
+    image: kafka-warehouse-connect:local
+    container_name: kw-connect
+    profiles: ["connect"]
+    ports:
+      - "8083:8083"
+    environment:
+      CONNECT_BOOTSTRAP_SERVERS: kafka:19092
+      CONNECT_GROUP_ID: kafka-connect-jdbc
+      CONNECT_CONFIG_STORAGE_TOPIC: _connect_configs
+      CONNECT_OFFSET_STORAGE_TOPIC: _connect_offsets
+      CONNECT_STATUS_STORAGE_TOPIC: _connect_status
+      CONNECT_REST_ADVERTISED_HOST_NAME: connect
+      CONNECT_KEY_CONVERTER: org.apache.kafka.connect.storage.StringConverter
+      CONNECT_VALUE_CONVERTER: io.confluent.connect.json.JsonSchemaConverter
+      CONNECT_VALUE_CONVERTER_SCHEMA_REGISTRY_URL: http://schema-registry:8081
+      CONNECT_PLUGIN_PATH: /usr/share/java,/usr/share/confluent-hub-components
+      CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: 1
+    depends_on:
+      kafka:
+        condition: service_healthy
+      schema-registry:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+
+volumes:
+  kafka-data:
+  pg-data:
+

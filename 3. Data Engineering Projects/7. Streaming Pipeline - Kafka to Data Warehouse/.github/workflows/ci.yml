@@ -1,0 +1,85 @@
+name: CI - Kafka streaming pipeline
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  lint-test-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      KAFKA_BOOTSTRAP_SERVERS: localhost:9092
+      SCHEMA_REGISTRY_URL: http://localhost:8081
+      POSTGRES_HOST: localhost
+      POSTGRES_PORT: "5434"
+      POSTGRES_DB: warehouse
+      POSTGRES_USER: warehouse
+      POSTGRES_PASSWORD: warehouse
+      SCHEMA_AUTO_REGISTER: "true"
+      BATCH_SIZE: "500"
+      MAX_LATENESS_SECONDS: "3600"
+      CONSUME_IDLE_TIMEOUT_SECONDS: "5"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Lint
+        run: ruff check src tests scripts
+
+      - name: Unit tests (no broker required)
+        run: pytest -m "not integration" -q
+
+      - name: Start streaming infrastructure
+        run: docker compose up -d --build --wait kafka schema-registry postgres
+
+      - name: Create topics and register schemas
+        run: |
+          python -m src.setup.init_topics
+          python -m src.setup.register_schemas
+
+      - name: Produce a fault-injected batch
+        run: |
+          python -m src.producer.produce \
+            --count 1500 \
+            --duplicate-rate 0.05 \
+            --late-rate 0.02 \
+            --out-of-order-rate 0.02 \
+            --malformed-rate 0.002
+
+      - name: Load into the warehouse until drained
+        run: python -m src.loader.consumer
+
+      - name: Verify idempotency invariants
+        run: python -m scripts.verify
+
+      - name: dbt build (transform + data tests)
+        run: dbt build --project-dir dbt_project --profiles-dir dbt_project
+
+      - name: Integration tests against the warehouse
+        run: pytest -m integration -q
+
+      - name: Dashboard render check (headless)
+        run: python -m scripts.check_dashboard
+
+      - name: Consumer lag gate
+        run: python -m src.monitoring.lag_report --fail-on-lag 10
+
+      - name: Stop infrastructure
+        if: always()
+        run: docker compose down -v

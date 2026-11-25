@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: One row per order, typed, with derived status flags.
+    columns:
+      - name: order_id
+        data_tests: [unique, not_null]
+      - name: customer_id
+        data_tests: [not_null]
+      - name: status
+        data_tests:
+          - accepted_values:
+              values: ["created", "paid", "shipped", "cancelled"]
+      - name: currency
+        data_tests:
+          - accepted_values:
+              values: ["EUR", "USD"]
+      - name: order_amount
+        data_tests: [not_null]
+
+  - name: stg_payments
+    description: One row per payment, typed, with settlement flags.
+    columns:
+      - name: payment_id
+        data_tests: [unique, not_null]
+      - name: order_id
+        data_tests: [not_null]
+      - name: status
+        data_tests:
+          - accepted_values:
+              values: ["authorized", "captured", "failed", "refunded"]
+
+  - name: stg_customers
+    description: Active customers (soft-deleted rows excluded; history lives in the snapshot).
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
+      - name: country
+        description: ISO-3166 alpha-2, enforced by the event contract.

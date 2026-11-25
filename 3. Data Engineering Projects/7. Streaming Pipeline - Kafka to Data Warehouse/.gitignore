@@ -1,0 +1,24 @@
+# ---------- secrets / local env ----------
+.env
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+
+# ---------- dbt ----------
+dbt_project/target/
+dbt_project/logs/
+dbt_project/dbt_packages/
+dbt_project/.user.yml
+dbt_project/package-lock.yml
+
+# ---------- local data / artefacts ----------
+data/
+*.log
+.DS_Store
+Thumbs.db

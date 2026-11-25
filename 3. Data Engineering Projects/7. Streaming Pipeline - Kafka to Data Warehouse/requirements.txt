@@ -1,0 +1,19 @@
+# Kafka client with Schema Registry support (librdkafka bindings)
+confluent-kafka[schemaregistry]==2.6.1
+
+# Warehouse access + payload validation
+psycopg[binary]==3.2.3
+jsonschema==4.23.0
+python-dotenv==1.0.1
+
+# Transformations
+dbt-core>=1.9,<1.10
+dbt-postgres==1.9.1
+
+# Monitoring dashboard
+streamlit>=1.50,<2
+pandas>=2.2
+
+# Quality gates
+pytest==8.3.4
+ruff==0.8.6

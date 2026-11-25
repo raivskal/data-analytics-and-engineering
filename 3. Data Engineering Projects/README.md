@@ -14,6 +14,7 @@ A collection of hands-on data engineering projects covering ingestion, orchestra
 | 4 | [Databricks Projects](4.%20Databricks%20Projects) | Databricks / Delta Live Tables examples: Asset Bundles, data privacy, performance tuning, streaming, and CDC-driven ETL | Databricks, Delta Lake, Delta Live Tables, Spark SQL, Python |
 | 5 | [Project Building a Retail Data Pipeline](5.%20Project%20Building%20a%20Retail%20Data%20Pipeline) | Extract → transform → load → validate pipeline for retail supply and demand analysis around public holidays | Python, pandas, PostgreSQL, Parquet |
 | 6 | [Simple workflows](6.%20Simple%20workflows) | Focused, single-purpose data workflows, starting with PySpark order cleaning for a demand-forecasting model | PySpark, Python |
+| 7 | [Streaming Pipeline - Kafka to Data Warehouse](7.%20Streaming%20Pipeline%20-%20Kafka%20to%20Data%20Warehouse) | Kafka → warehouse streaming with schema governance, dead-letter handling, watermarks, idempotent upserts, a live Streamlit monitoring dashboard, and a verified replay proof | Kafka (KRaft), Schema Registry, Python, PostgreSQL, dbt, Streamlit, Docker, GitHub Actions |
 
 ---
 

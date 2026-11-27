@@ -2,6 +2,12 @@
 
 Protecting sensitive data inside the lakehouse with **Unity Catalog** and **Delta Lake Change Data Feed**: restricting access, masking PII, breaking the link between identities and records, and propagating privacy-safe changes downstream.
 
+<p align="center">
+  <img src="images/privacy-flow.svg" alt="Privacy pipeline: raw PII, Unity Catalog grants, masks and filters, pseudonymisation, anonymisation and CDF propagation" width="940">
+</p>
+
+*Editable source: [`images/privacy-flow.drawio`](images/privacy-flow.drawio).*
+
 ---
 
 ## What is covered

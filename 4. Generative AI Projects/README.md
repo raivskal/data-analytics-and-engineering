@@ -1,8 +1,43 @@
 # Generative AI Projects
 
+<p align="center">
+  <img src="../assets/icons/googlegemini.svg" width="44" alt="Google Gemini">
+  <img src="../assets/icons/huggingface.svg" width="44" alt="Hugging Face">
+  <img src="../assets/icons/langchain.svg" width="44" alt="LangChain">
+  <img src="../assets/icons/llamaindex.svg" width="44" alt="LlamaIndex">
+  <img src="../assets/icons/crewai.svg" width="44" alt="CrewAI">
+  <img src="../assets/icons/django.svg" width="44" alt="Django">
+  <img src="../assets/icons/streamlit.svg" width="44" alt="Streamlit">
+  <img src="../assets/icons/ollama.svg" width="44" alt="Ollama">
+  <img src="../assets/icons/mcp.svg" width="44" alt="Model Context Protocol">
+  <img src="../assets/icons/gradio.svg" width="44" alt="Gradio">
+  <img src="../assets/icons/postman.svg" width="44" alt="Postman">
+</p>
+
 A hands-on tour of the generative-AI stack, from tool protocols and model APIs up to shipped apps. It starts with an MCP server and raw Hugging Face models, moves through LangChain/LlamaIndex retrieval and text-to-SQL, then into multi-agent frameworks (CrewAI, AutoGen, Google ADK), and finishes by serving it all through Django, Django REST, Streamlit and Tkinter.
 
 Each folder is self-contained study material: notebooks plus the small datasets, PDFs and zipped projects they use.
+
+## Architecture at a glance
+
+<p align="center">
+  <img src="../assets/diagrams/04-genai-flow.svg" alt="Generative AI stack: clients, API layer, orchestration, tools and models" width="1180">
+</p>
+
+Requests enter from a UI or client, pass through an API layer, are orchestrated
+by a framework (chains, RAG, crews or an agent team), and finally call a tool or
+a model — Gemini in the cloud, or a small model running locally. Not every folder
+implements every layer; section 8 is the one that ships the whole stack.
+
+<p align="center">
+  <img src="../assets/diagrams/04-agent-patterns.svg" alt="Three ADK agent patterns: sequential, parallel and loop" width="1000">
+</p>
+
+Section 6 uses these three control-flow primitives to build its eight ADK apps:
+a fixed order, a fan-out followed by a synthesis, and a loop that iterates until
+a reviewer accepts.
+
+*Editable draw.io sources: [`assets/diagrams`](../assets/diagrams).*
 
 ---
 

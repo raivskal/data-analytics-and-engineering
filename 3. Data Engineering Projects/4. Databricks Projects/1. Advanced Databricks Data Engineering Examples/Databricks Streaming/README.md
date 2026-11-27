@@ -2,6 +2,12 @@
 
 Structured Streaming and **Delta Live Tables** end to end: running continuously updating queries, aggregating over event time with watermarks, joining two streams, and building a Bronze → Silver medallion pipeline with Auto Loader and data-quality expectations.
 
+<p align="center">
+  <img src="images/streaming-flow.svg" alt="Medallion streaming pipeline: landing files, Auto Loader, bronze, silver and gold" width="900">
+</p>
+
+*Editable source: [`images/streaming-flow.drawio`](images/streaming-flow.drawio).*
+
 ---
 
 ## What is covered

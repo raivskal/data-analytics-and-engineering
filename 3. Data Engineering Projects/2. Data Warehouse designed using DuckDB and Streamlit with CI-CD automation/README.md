@@ -2,6 +2,12 @@
 
 A modern, local Data Warehouse (DWH) designed using **DuckDB** and **Streamlit** with full CI/CD automation.
 
+<p align="center">
+  <img src="images/dwh-architecture.svg" alt="DuckDB warehouse: ingestion, raw schema, dbt staging, dbt marts and a Streamlit dashboard, with sqlfluff and dbt build in CI" width="900">
+</p>
+
+*Editable source: [`images/dwh-architecture.drawio`](images/dwh-architecture.drawio).*
+
 ---
 
 ## Architecture Design

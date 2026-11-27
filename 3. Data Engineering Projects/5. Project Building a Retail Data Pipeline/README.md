@@ -2,6 +2,12 @@
 
 An ETL pipeline built for **Walmart** e-commerce analysis: grocery sales are combined with complementary economic data to study supply and demand around public holidays such as the Super Bowl, Labour Day, Thanksgiving, and Christmas.
 
+<p align="center">
+  <img src="images/pipeline-flow.svg" alt="Retail pipeline: PostgreSQL and Parquet sources, extract, transform, aggregate, load and validation" width="940">
+</p>
+
+*Editable source: [`images/pipeline-flow.drawio`](images/pipeline-flow.drawio).*
+
 ---
 
 ## Business context
@@ -63,6 +69,7 @@ The notebook is organised as four functions plus a validation step, so each stag
 | `clean_data.csv` | Output of the transformation stage |
 | `agg_data.csv` | Monthly average weekly sales aggregate |
 | `walmartecomm.jpg` | Project illustration |
+| `images/pipeline-flow.svg` | Pipeline diagram (editable `.drawio` alongside) |
 
 ---
 

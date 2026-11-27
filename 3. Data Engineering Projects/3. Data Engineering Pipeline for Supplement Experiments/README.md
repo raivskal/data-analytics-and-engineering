@@ -10,6 +10,12 @@ Cleaning and merging four related health and supplement datasets into one analys
 
 Today that cross-referencing is done ad hoc across separate notebooks, which is slow and error-prone. The deliverable for this project is a single reusable function that replaces the manual joins.
 
+<p align="center">
+  <img src="images/merge-flow.svg" alt="Four CSV sources merged by one function into one row per user per day" width="900">
+</p>
+
+*Editable source: [`images/merge-flow.drawio`](images/merge-flow.drawio).*
+
 ---
 
 ## Data
@@ -82,6 +88,7 @@ The notebook breaks the work into small, testable steps that `merge_all_data` or
 | `experiments.csv` | Experiment metadata |
 | `user_profiles.csv` | User demographics |
 | `schema.png` | Entity relationship diagram of the four sources |
+| `images/merge-flow.svg` | Four sources → one analysis-ready table (editable `.drawio` alongside) |
 
 ---
 

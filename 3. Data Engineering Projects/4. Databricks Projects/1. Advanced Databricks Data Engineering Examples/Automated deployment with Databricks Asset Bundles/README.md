@@ -2,6 +2,12 @@
 
 Deploying Databricks jobs, pipelines, and notebooks the same way as application code: packaged as **Databricks Asset Bundles (DABs)**, version-controlled, promoted between environments, and released through CI/CD.
 
+<p align="center">
+  <img src="images/bundle-flow.svg" alt="Asset bundle lifecycle: databricks.yml, validate, deploy to dev/staging/prod, run" width="900">
+</p>
+
+*Editable source: [`images/bundle-flow.drawio`](images/bundle-flow.drawio).*
+
 ---
 
 ## What is covered

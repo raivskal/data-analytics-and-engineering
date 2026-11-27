@@ -1,6 +1,38 @@
 # Data Engineering Projects
 
+<p align="center">
+  <img src="../assets/icons/python.svg" width="44" alt="Python">
+  <img src="../assets/icons/apacheairflow.svg" width="44" alt="Apache Airflow">
+  <img src="../assets/icons/docker.svg" width="44" alt="Docker">
+  <img src="../assets/icons/postgresql.svg" width="44" alt="PostgreSQL">
+  <img src="../assets/icons/duckdb.svg" width="44" alt="DuckDB">
+  <img src="../assets/icons/dbt.svg" width="44" alt="dbt">
+  <img src="../assets/icons/apachekafka.svg" width="44" alt="Apache Kafka">
+  <img src="../assets/icons/apachespark.svg" width="44" alt="Apache Spark">
+  <img src="../assets/icons/databricks.svg" width="44" alt="Databricks">
+  <img src="../assets/icons/streamlit.svg" width="44" alt="Streamlit">
+  <img src="../assets/icons/git.svg" width="44" alt="git">
+  <img src="../assets/icons/githubactions.svg" width="44" alt="GitHub Actions">
+</p>
+
 A collection of hands-on data engineering projects covering ingestion, orchestration, transformation, warehousing, data quality, CI/CD, and lakehouse patterns — built with Python, SQL, Docker, Apache Airflow, dbt, DuckDB, PostgreSQL, PySpark, and Databricks.
+
+## How the pipeline stack fits together
+
+<p align="center">
+  <img src="../assets/diagrams/03-de-etl-flow.svg" alt="ETL stack: sources, ingestion, orchestration, warehouse, transformation and serving, with CI/CD, data quality and monitoring" width="1180">
+</p>
+
+Every project below is a slice of this stack: something lands the data
+(projects 1, 5 and 7), something stores it (1, 2 and 4), something transforms
+it (2, 3, 4 and 6), and the quality, CI/CD and monitoring band is what makes
+the result trustworthy.
+
+<p align="center">
+  <img src="../assets/diagrams/03-de-project-map.svg" alt="The seven data engineering projects with the tools each uses" width="1180">
+</p>
+
+*Editable draw.io sources: [`assets/diagrams`](../assets/diagrams).*
 
 ---
 

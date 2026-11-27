@@ -2,6 +2,12 @@
 
 An end-to-end e-commerce ETL pipeline built with **Delta Live Tables (SQL)** and **Delta Lake Change Data Feed**, following the medallion architecture and applying changes with Delta's `APPLY CHANGES` (AUTO CDC) API.
 
+<p align="center">
+  <img src="images/cdc-flow.svg" alt="CDC pipeline: raw change events, bronze CDF tables, APPLY CHANGES, silver and gold" width="940">
+</p>
+
+*Editable source: [`images/cdc-flow.drawio`](images/cdc-flow.drawio).*
+
 ---
 
 ## Pipeline design
@@ -25,6 +31,7 @@ Because the Bronze tables capture every insert, update, and delete, the Silver t
 | `ecommerce_etl.ipynb` | The full DLT pipeline: Bronze CDF streaming tables, Silver `APPLY CHANGES` transformations and enrichment, Gold materialized view |
 | `raw_customers.csv` | Sample customer change records |
 | `raw_orders.csv` | Sample order change records |
+| `images/cdc-flow.svg` | Bronze → silver → gold flow diagram (editable `.drawio` alongside) |
 
 ---
 

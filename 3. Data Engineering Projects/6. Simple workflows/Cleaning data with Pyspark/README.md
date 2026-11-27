@@ -2,6 +2,12 @@
 
 Cleaning **Voltmart**'s order history (an electronics e-commerce company) so the Machine Learning team can build a demand-forecasting model on top of it. The ML team specified the exact output table format, and this workflow applies those rules with PySpark.
 
+<p align="center">
+  <img src="images/cleaning-flow.svg" alt="PySpark cleaning: drop night orders, normalise products, derive state, write clean Parquet" width="940">
+</p>
+
+*Editable source: [`images/cleaning-flow.drawio`](images/cleaning-flow.drawio).*
+
 ---
 
 ## Input
@@ -45,6 +51,7 @@ Cleaning **Voltmart**'s order history (an electronics e-commerce company) so the
 | `notebook.ipynb` | Cleaning and transformation workflow |
 | `orders_data.parquet` | Raw order data |
 | `ecommerce_analytics-1224x532.jpg` | Project illustration |
+| `images/cleaning-flow.svg` | Cleaning flow diagram (editable `.drawio` alongside) |
 | `orders_data_clean.parquet` | Output — created when the notebook runs |
 
 ---

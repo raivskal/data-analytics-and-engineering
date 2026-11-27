@@ -2,6 +2,12 @@
 
 A compact example of declarative pipelines in pure **Delta Live Tables SQL**: ingest a public dataset with `read_files`, prepare it in a derived table, and answer business questions with SQL.
 
+<p align="center">
+  <img src="images/dlt-sql-flow.svg" alt="Simple DLT SQL pipeline: Million Song Dataset, songs_raw, songs_prepared, top artists by year" width="860">
+</p>
+
+*Editable source: [`images/dlt-sql-flow.drawio`](images/dlt-sql-flow.drawio).*
+
 ---
 
 ## Pipeline
@@ -24,6 +30,7 @@ A compact example of declarative pipelines in pure **Delta Live Tables SQL**: in
 | File | Description |
 |------|-------------|
 | `databricks_etl_sql.ipynb` | DLT SQL pipeline definition plus analysis queries |
+| `images/dlt-sql-flow.svg` | Pipeline diagram (editable `.drawio` alongside) |
 
 ---
 

@@ -2,6 +2,12 @@
 
 Diagnosing and fixing the query and storage problems that show up in production lakehouse workloads: too many small files, missing data skipping, expensive shuffles, exploding joins, and slow user-defined functions.
 
+<p align="center">
+  <img src="images/perf-flow.svg" alt="Performance ladder: file explosion, OPTIMIZE, liquid clustering, shuffle control, vectorised UDFs, faster queries" width="940">
+</p>
+
+*Editable source: [`images/perf-flow.drawio`](images/perf-flow.drawio).*
+
 ---
 
 ## What is covered

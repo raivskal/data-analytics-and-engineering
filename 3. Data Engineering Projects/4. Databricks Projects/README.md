@@ -2,6 +2,12 @@
 
 A set of Databricks projects built on Delta Lake and **Delta Live Tables (DLT)**, covering the advanced platform features a data engineer is expected to know: deployment automation with Asset Bundles, Unity Catalog data privacy, query performance tuning, structured streaming, and Change Data Capture ETL.
 
+<p align="center">
+  <img src="images/project-map.svg" alt="Three Databricks projects: advanced examples, CDC ETL and simple SQL" width="900">
+</p>
+
+*Editable source: [`images/project-map.drawio`](images/project-map.drawio).*
+
 ---
 
 ## Projects

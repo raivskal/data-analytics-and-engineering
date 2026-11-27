@@ -1,0 +1,12 @@
+# Python bytecode created when the diagram generator runs
+__pycache__/
+*.py[cod]
+
+# Local virtual environments
+.venv/
+venv/
+
+# Editor / OS noise
+.vscode/
+.DS_Store
+Thumbs.db

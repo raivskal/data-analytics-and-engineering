@@ -1,5 +1,12 @@
 # Power BI Demo — Visuals & DAX Measures
 
+<p align="center">
+  <img src="../assets/icons/powerbi.svg" width="44" alt="Power BI">
+  <img src="../assets/icons/excel.svg" width="44" alt="Excel">
+  <img src="../assets/icons/csv.svg" width="44" alt="CSV">
+  <img src="../assets/icons/dax.svg" width="44" alt="DAX">
+</p>
+
 A single Power BI Desktop report that demonstrates report design (visual types, slicers, bookmarks, navigation, field parameters) and a broad set of DAX patterns — iterators, ranking, filter manipulation, `TREATAS` goal tracking, scenario analysis, and DAX table functions — on a retail sales model.
 
 > Measure names, page names, visual types, table names, and which measure is used on which page were all read out of the report definition packaged inside the `.pbix`. Full details in [DAX-MEASURES.md](DAX-MEASURES.md).
@@ -20,6 +27,21 @@ A single Power BI Desktop report that demonstrates report design (visual types, 
 | Measures | 28 in `Measure Table`, plus 6 what-if deltas and 3 table-function measures |
 | Custom visuals | `SimpleWaterfall`, `ChicletSlicer` |
 | Bookmarks | 5 — `Clear Filter Page 1` … `Clear Filter Page 5` |
+
+---
+
+
+## How the report is built
+
+<p align="center">
+  <img src="../assets/diagrams/02-powerbi-flow.svg" alt="Power BI report pipeline: sources, Power Query, data model, DAX measures, report pages and navigation" width="1150">
+</p>
+
+Imported tables are shaped in Power Query, related in the model, measured in
+DAX, then laid out over six pages that a viewer navigates with the header
+buttons and resets with the bookmarks.
+
+*Editable source: [`assets/diagrams/02-powerbi-flow.drawio`](../assets/diagrams/02-powerbi-flow.drawio).*
 
 ---
 
@@ -51,6 +73,15 @@ The field-parameter page is stored with the display name `PRODUCTS - FIELD PAREM
 The demo tables are named after the DAX function they illustrate — each is a calculated table whose result shows what that function returns against the same retail data. `4-5-4 Calendar` and `Date Table with CALENDARAUTO` contrast a hand-built date table with a generated one, and the two `Target Sales - … (DATATABLE)` tables supply the goals consumed by the `TREATAS` measures.
 
 Model note: relationship auto-detection is **disabled** in the report settings, so relationships are defined manually — use the model view in Power BI Desktop as the source of truth for cardinality and filter direction.
+
+<p align="center">
+  <img src="../assets/diagrams/02-powerbi-star-schema.svg" alt="Star schema: five dimension tables around two fact tables plus the measure table" width="980">
+</p>
+
+Two facts (`Sales by Store`, `Food Inventory`) sit in the middle; the five
+dimensions filter them, and every reusable measure lives in `Measure Table`.
+
+*Editable source: [`assets/diagrams/02-powerbi-star-schema.drawio`](../assets/diagrams/02-powerbi-star-schema.drawio).*
 
 ---
 

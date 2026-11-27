@@ -1,0 +1,277 @@
+{
+  "apacheairflow": {
+    "diagrams_url": "https://cdn.simpleicons.org/apacheairflow",
+    "file": "assets/icons/apacheairflow.svg",
+    "url": "https://cdn.simpleicons.org/apacheairflow"
+  },
+  "apachekafka": {
+    "diagrams_url": "https://cdn.simpleicons.org/apachekafka",
+    "file": "assets/icons/apachekafka.svg",
+    "url": "https://cdn.simpleicons.org/apachekafka"
+  },
+  "apachespark": {
+    "diagrams_url": "https://cdn.simpleicons.org/apachespark",
+    "file": "assets/icons/apachespark.svg",
+    "url": "https://cdn.simpleicons.org/apachespark"
+  },
+  "autoloader": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iI0ZGMzYyMSIvPjx0ZXh0IHg9IjUwIiB5PSI1OS43IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI3IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5BVVRPPC90ZXh0Pjwvc3ZnPgo=",
+    "file": "assets/icons/autoloader.svg",
+    "url": null
+  },
+  "catboost": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iI0ZGQ0MwMCIvPjx0ZXh0IHg9IjUwIiB5PSI2Ni42IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjQ2IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjMTUyNjJlIj5DQjwvdGV4dD48L3N2Zz4K",
+    "file": "assets/icons/catboost.svg",
+    "url": null
+  },
+  "chiclet": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzExOERGRiIvPjx0ZXh0IHg9IjUwIiB5PSI1Ny45IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5TTElDRVI8L3RleHQ+PC9zdmc+Cg==",
+    "file": "assets/icons/chiclet.svg",
+    "url": null
+  },
+  "chromadb": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iI0ZGNkIzNSIvPjx0ZXh0IHg9IjUwIiB5PSI1Ny45IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5DSFJPTUE8L3RleHQ+PC9zdmc+Cg==",
+    "file": "assets/icons/chromadb.svg",
+    "url": null
+  },
+  "crewai": {
+    "diagrams_url": "https://cdn.simpleicons.org/crewai",
+    "file": "assets/icons/crewai.svg",
+    "url": "https://cdn.simpleicons.org/crewai"
+  },
+  "csv": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzRCNkI3QiIvPjx0ZXh0IHg9IjUwIiB5PSI2My4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5DU1Y8L3RleHQ+PC9zdmc+Cg==",
+    "file": "assets/icons/csv.svg",
+    "url": null
+  },
+  "databricks": {
+    "diagrams_url": "https://cdn.simpleicons.org/databricks",
+    "file": "assets/icons/databricks.svg",
+    "url": "https://cdn.simpleicons.org/databricks"
+  },
+  "dax": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iI0YyQzgxMSIvPjx0ZXh0IHg9IjUwIiB5PSI2My4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjMTUyNjJlIj5EQVg8L3RleHQ+PC9zdmc+Cg==",
+    "file": "assets/icons/dax.svg",
+    "url": null
+  },
+  "dbt": {
+    "diagrams_url": "https://api.iconify.design/devicon/dbt.svg",
+    "file": "assets/icons/dbt.svg",
+    "url": "https://api.iconify.design/devicon/dbt.svg"
+  },
+  "deltalake": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzAwQURENCIvPjx0ZXh0IHg9IjUwIiB5PSI1Ny45IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5ERUxUQTwvdGV4dD48L3N2Zz4K",
+    "file": "assets/icons/deltalake.svg",
+    "url": null
+  },
+  "dim": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzExOERGRiIvPjx0ZXh0IHg9IjUwIiB5PSI2My4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5ESU08L3RleHQ+PC9zdmc+Cg==",
+    "file": "assets/icons/dim.svg",
+    "url": null
+  },
+  "django": {
+    "diagrams_url": "https://cdn.simpleicons.org/django",
+    "file": "assets/icons/django.svg",
+    "url": "https://cdn.simpleicons.org/django"
+  },
+  "dlq": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iI0MwMzkyQiIvPjx0ZXh0IHg9IjUwIiB5PSI2My4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5ETFE8L3RleHQ+PC9zdmc+Cg==",
+    "file": "assets/icons/dlq.svg",
+    "url": null
+  },
+  "docker": {
+    "diagrams_url": "https://cdn.simpleicons.org/docker",
+    "file": "assets/icons/docker.svg",
+    "url": "https://cdn.simpleicons.org/docker"
+  },
+  "duckdb": {
+    "diagrams_url": "https://cdn.simpleicons.org/duckdb",
+    "file": "assets/icons/duckdb.svg",
+    "url": "https://cdn.simpleicons.org/duckdb"
+  },
+  "excel": {
+    "diagrams_url": "https://api.iconify.design/simple-icons/microsoftexcel.svg",
+    "file": "assets/icons/excel.svg",
+    "url": "https://api.iconify.design/simple-icons/microsoftexcel.svg"
+  },
+  "git": {
+    "diagrams_url": "https://cdn.simpleicons.org/git",
+    "file": "assets/icons/git.svg",
+    "url": "https://cdn.simpleicons.org/git"
+  },
+  "githubactions": {
+    "diagrams_url": "https://cdn.simpleicons.org/githubactions",
+    "file": "assets/icons/githubactions.svg",
+    "url": "https://cdn.simpleicons.org/githubactions"
+  },
+  "googlegemini": {
+    "diagrams_url": "https://cdn.simpleicons.org/googlegemini",
+    "file": "assets/icons/googlegemini.svg",
+    "url": "https://cdn.simpleicons.org/googlegemini"
+  },
+  "gradio": {
+    "diagrams_url": "https://cdn.simpleicons.org/gradio",
+    "file": "assets/icons/gradio.svg",
+    "url": "https://cdn.simpleicons.org/gradio"
+  },
+  "huggingface": {
+    "diagrams_url": "https://cdn.simpleicons.org/huggingface",
+    "file": "assets/icons/huggingface.svg",
+    "url": "https://cdn.simpleicons.org/huggingface"
+  },
+  "jupyter": {
+    "diagrams_url": "https://cdn.simpleicons.org/jupyter",
+    "file": "assets/icons/jupyter.svg",
+    "url": "https://cdn.simpleicons.org/jupyter"
+  },
+  "keras": {
+    "diagrams_url": "https://cdn.simpleicons.org/keras",
+    "file": "assets/icons/keras.svg",
+    "url": "https://cdn.simpleicons.org/keras"
+  },
+  "langchain": {
+    "diagrams_url": "https://cdn.simpleicons.org/langchain",
+    "file": "assets/icons/langchain.svg",
+    "url": "https://cdn.simpleicons.org/langchain"
+  },
+  "llamaindex": {
+    "diagrams_url": "https://api.iconify.design/thesvg-color/llamaindex.svg",
+    "file": "assets/icons/llamaindex.svg",
+    "url": "https://api.iconify.design/thesvg-color/llamaindex.svg"
+  },
+  "matplotlib": {
+    "diagrams_url": "https://api.iconify.design/devicon/matplotlib.svg",
+    "file": "assets/icons/matplotlib.svg",
+    "url": "https://api.iconify.design/devicon/matplotlib.svg"
+  },
+  "mcp": {
+    "diagrams_url": "https://api.iconify.design/simple-icons/modelcontextprotocol.svg",
+    "file": "assets/icons/mcp.svg",
+    "url": "https://api.iconify.design/simple-icons/modelcontextprotocol.svg"
+  },
+  "notebook": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iI0YzNzYyNiIvPjx0ZXh0IHg9IjUwIiB5PSI1Ny45IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5JUFlOQjwvdGV4dD48L3N2Zz4K",
+    "file": "assets/icons/notebook.svg",
+    "url": null
+  },
+  "numpy": {
+    "diagrams_url": "https://cdn.simpleicons.org/numpy",
+    "file": "assets/icons/numpy.svg",
+    "url": "https://cdn.simpleicons.org/numpy"
+  },
+  "ollama": {
+    "diagrams_url": "https://cdn.simpleicons.org/ollama",
+    "file": "assets/icons/ollama.svg",
+    "url": "https://cdn.simpleicons.org/ollama"
+  },
+  "openpyxl": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzIxNzM0NiIvPjx0ZXh0IHg9IjUwIiB5PSI1OS43IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI3IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5YTFNYPC90ZXh0Pjwvc3ZnPgo=",
+    "file": "assets/icons/openpyxl.svg",
+    "url": null
+  },
+  "pandas": {
+    "diagrams_url": "https://cdn.simpleicons.org/pandas",
+    "file": "assets/icons/pandas.svg",
+    "url": "https://cdn.simpleicons.org/pandas"
+  },
+  "parquet": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzBFNzQ5MCIvPjx0ZXh0IHg9IjUwIiB5PSI1OS43IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI3IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5QQVJRPC90ZXh0Pjwvc3ZnPgo=",
+    "file": "assets/icons/parquet.svg",
+    "url": null
+  },
+  "plotly": {
+    "diagrams_url": "https://cdn.simpleicons.org/plotly",
+    "file": "assets/icons/plotly.svg",
+    "url": "https://cdn.simpleicons.org/plotly"
+  },
+  "postgresql": {
+    "diagrams_url": "https://cdn.simpleicons.org/postgresql",
+    "file": "assets/icons/postgresql.svg",
+    "url": "https://cdn.simpleicons.org/postgresql"
+  },
+  "postman": {
+    "diagrams_url": "https://cdn.simpleicons.org/postman",
+    "file": "assets/icons/postman.svg",
+    "url": "https://cdn.simpleicons.org/postman"
+  },
+  "powerbi": {
+    "diagrams_url": "https://api.iconify.design/devicon/powerbi.svg",
+    "file": "assets/icons/powerbi.svg",
+    "url": "https://api.iconify.design/devicon/powerbi.svg"
+  },
+  "pytest": {
+    "diagrams_url": "https://cdn.simpleicons.org/pytest",
+    "file": "assets/icons/pytest.svg",
+    "url": "https://cdn.simpleicons.org/pytest"
+  },
+  "python": {
+    "diagrams_url": "https://cdn.simpleicons.org/python",
+    "file": "assets/icons/python.svg",
+    "url": "https://cdn.simpleicons.org/python"
+  },
+  "requests": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzBBN0VBNCIvPjx0ZXh0IHg9IjUwIiB5PSI2My4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5BUEk8L3RleHQ+PC9zdmc+Cg==",
+    "file": "assets/icons/requests.svg",
+    "url": null
+  },
+  "scikitlearn": {
+    "diagrams_url": "https://cdn.simpleicons.org/scikitlearn",
+    "file": "assets/icons/scikitlearn.svg",
+    "url": "https://cdn.simpleicons.org/scikitlearn"
+  },
+  "scipy": {
+    "diagrams_url": "https://cdn.simpleicons.org/scipy",
+    "file": "assets/icons/scipy.svg",
+    "url": "https://cdn.simpleicons.org/scipy"
+  },
+  "seaborn": {
+    "diagrams_url": "https://api.iconify.design/devicon/seaborn.svg",
+    "file": "assets/icons/seaborn.svg",
+    "url": "https://api.iconify.design/devicon/seaborn.svg"
+  },
+  "soda": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzAwQTNBMSIvPjx0ZXh0IHg9IjUwIiB5PSI1OS43IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI3IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5TT0RBPC90ZXh0Pjwvc3ZnPgo=",
+    "file": "assets/icons/soda.svg",
+    "url": null
+  },
+  "sqlfluff": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzI1OUQ5RSIvPjx0ZXh0IHg9IjUwIiB5PSI1OS43IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI3IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5MSU5UPC90ZXh0Pjwvc3ZnPgo=",
+    "file": "assets/icons/sqlfluff.svg",
+    "url": null
+  },
+  "sqlite": {
+    "diagrams_url": "https://cdn.simpleicons.org/sqlite",
+    "file": "assets/icons/sqlite.svg",
+    "url": "https://cdn.simpleicons.org/sqlite"
+  },
+  "streamlit": {
+    "diagrams_url": "https://cdn.simpleicons.org/streamlit",
+    "file": "assets/icons/streamlit.svg",
+    "url": "https://cdn.simpleicons.org/streamlit"
+  },
+  "tavily": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzNGNTFCNSIvPjx0ZXh0IHg9IjUwIiB5PSI1OS43IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI3IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5UVkxZPC90ZXh0Pjwvc3ZnPgo=",
+    "file": "assets/icons/tavily.svg",
+    "url": null
+  },
+  "tensorflow": {
+    "diagrams_url": "https://cdn.simpleicons.org/tensorflow",
+    "file": "assets/icons/tensorflow.svg",
+    "url": "https://cdn.simpleicons.org/tensorflow"
+  },
+  "tkinter": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzI1OTZCRSIvPjx0ZXh0IHg9IjUwIiB5PSI2Ni42IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjQ2IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5UazwvdGV4dD48L3N2Zz4K",
+    "file": "assets/icons/tkinter.svg",
+    "url": null
+  },
+  "unitycatalog": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzFCMzEzOSIvPjx0ZXh0IHg9IjUwIiB5PSI1Ny45IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5VTklUWTwvdGV4dD48L3N2Zz4K",
+    "file": "assets/icons/unitycatalog.svg",
+    "url": null
+  },
+  "xgboost": {
+    "diagrams_url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHJ4PSIyMCIgZmlsbD0iIzE4OUYzQiIvPjx0ZXh0IHg9IjUwIiB5PSI2My4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iU2Vnb2UgVUksIEhlbHZldGljYSBOZXVlLCBIZWx2ZXRpY2EsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iNzAwIiBsZXR0ZXItc3BhY2luZz0iMC41IiBmaWxsPSIjZmZmZmZmIj5YR0I8L3RleHQ+PC9zdmc+Cg==",
+    "file": "assets/icons/xgboost.svg",
+    "url": null
+  }
+}

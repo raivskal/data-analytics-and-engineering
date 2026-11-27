@@ -6,6 +6,12 @@ It is built to be *operated*, not just demoed: explicit topic provisioning, sche
 
 Everything below was measured on a real local run of this repository (see [Verified results](#verified-results)).
 
+<p align="center">
+  <img src="images/pipeline-flow.svg" alt="Kafka streaming pipeline: producer, stream-loader, raw and landing tables, dbt staging and marts, Streamlit dashboard, with DLQ and ops" width="1100">
+</p>
+
+*Editable source: [`images/pipeline-flow.drawio`](images/pipeline-flow.drawio).*
+
 ---
 
 ## Architecture

@@ -2,6 +2,12 @@
 
 A workshop-style set of demo and lab notebooks covering the Databricks features that come up in day-to-day data engineering work: deployment automation, data privacy and governance, query performance, and streaming pipelines.
 
+<p align="center">
+  <img src="images/modules.svg" alt="Four Databricks workshop modules: Asset Bundles, data privacy, performance and streaming" width="940">
+</p>
+
+*Editable source: [`images/modules.drawio`](images/modules.drawio).*
+
 ---
 
 ## Modules

@@ -39,13 +39,13 @@ SPECS = [
     {
         "slug": "01-analytics-ml-flow",
         "name": "Data analytics and machine learning: from raw data to a validated model",
-        "caption": "Data analytics & machine learning | 7 study folders | 33 notebooks",
+        "caption": "Data analytics & machine learning | 7 folders | 33 notebooks",
         "out": "assets/diagrams/01-analytics-ml-flow",
         "width": 1400,
         "node_w": 186,
         "rows": [
             {
-                "band": "STUDY PATH",
+                "band": "FROM DATA TO MODEL",
                 "nodes": [
                     {"id": "src", "title": "Data sources",
                      "sub": "CSV · REST API\nExcel exports",
@@ -78,10 +78,10 @@ SPECS = [
 
     # ------------------------------------------------------------------ 02 --
     {
-        "slug": "01-study-path",
-        "name": "Study path: foundations first, then the model families",
-        "caption": "Study path | folder order follows the original course",
-        "out": "assets/diagrams/01-study-path",
+        "slug": "01-folder-map",
+        "name": "Folder map: foundations first, then the model families",
+        "caption": "Folder map | order follows the original course",
+        "out": "assets/diagrams/01-folder-map",
         "width": 1200,
         "node_w": 216,
         "rows": [

@@ -6,6 +6,7 @@ Icons and diagrams used by the README files in this repository.
 assets/
 ├── icons/       one SVG per technology (brand colour baked in)
 ├── diagrams/    section-level diagrams, one .svg + one .drawio each
+├── images/      screenshots used by the READMEs (e.g. the Power BI SUMMARY page)
 └── README.md    this file
 ```
 
@@ -14,8 +15,8 @@ so each project folder stays self-contained.
 
 ## How they are built
 
-Everything here is generated from `tools/diagram_specs.py` by
-`tools/build_diagrams.py`:
+Everything here except the screenshots is generated from `tools/diagram_specs.py`
+by `tools/build_diagrams.py`:
 
 ```bash
 python tools/build_diagrams.py                # rebuild every diagram

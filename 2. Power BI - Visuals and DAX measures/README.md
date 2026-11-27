@@ -30,6 +30,26 @@ A single Power BI Desktop report that demonstrates report design (visual types, 
 
 ---
 
+## Report preview
+
+<p align="center">
+  <img src="../assets/images/PowerBI%20Demo%20Raivis.png" alt="SUMMARY page of the Power BI demo: RISE UP header with the Cost / Profit / Revenue measure buttons, Year, Quarter and Month filters, the 2017, 2018 and 2019 cards plus two year-on-year comparison cards, a Cost line chart by month, a map of sales by store, two Cost treemaps and four target-realisation gauges" width="1000">
+</p>
+
+The `SUMMARY` page as it opens in Power BI Desktop: the 2017 / 2018 / 2019 cards
+and the two comparison cards (`2017 vs 2018`, `2018 vs 2019`) at the top left,
+the `Cost` trend by month underneath, the store map on the right, the two cost
+treemaps over the product hierarchy at the bottom left, and the four gauges that
+show target realisation for `2019.03-04`.
+
+The `Cost` / `Profit` / `Revenue` buttons are the `Sales measures selection`
+field parameter — clicking one swaps the measure in the cards and charts without
+editing the report — and the `Clear Filter` button fires the page bookmark. The
+`29.04.2019` next to the title is the latest sales date in the model.
+
+*Screenshot: 1456 × 817, captured from Power BI Desktop.*
+
+---
 
 ## How the report is built
 

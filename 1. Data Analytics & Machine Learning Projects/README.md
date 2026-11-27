@@ -16,11 +16,10 @@
 
 A structured learning portfolio that walks from Python fundamentals through pandas-based data analysis and statistics, and on to the main families of machine learning models — regression, classification, clustering, and neural networks. Every topic is practised in a Jupyter notebook (plus a couple of standalone Python scripts), numbered in the order the material was studied.
 
-
-## How the study path fits together
+## How the folders fit together
 
 <p align="center">
-  <img src="../assets/diagrams/01-analytics-ml-flow.svg" alt="Data analytics and machine learning path: data sources, Python, pandas, statistics, machine learning, neural networks and visualisation" width="1150">
+  <img src="../assets/diagrams/01-analytics-ml-flow.svg" alt="Data analytics and machine learning: data sources, Python, pandas, statistics, machine learning, neural networks and visualisation" width="1150">
 </p>
 
 Raw data comes in on the left; each box is a stage the notebooks walk through —
@@ -28,7 +27,7 @@ load it with Python, shape it with pandas, describe it with SciPy, then fit
 progressively stronger models and finish with a chart.
 
 <p align="center">
-  <img src="../assets/diagrams/01-study-path.svg" alt="Study path: three foundation folders, then four modelling folders" width="1000">
+  <img src="../assets/diagrams/01-folder-map.svg" alt="Folder map: three foundation folders, then four modelling folders" width="1000">
 </p>
 
 The same order as the folders below: three foundations, then four model families.

@@ -35,6 +35,36 @@ KAFKA = "#1f2b36"
 
 
 SPECS = [
+    # ------------------------------------------------------------------ 00 --
+    {
+        "slug": "00-portfolio-map",
+        "name": "Portfolio map: four sections, one toolchain",
+        "caption": "Portfolio map | four sections",
+        "out": "assets/diagrams/00-portfolio-map",
+        "width": 1240,
+        "node_w": 250,
+        "rows": [
+            {
+                "band": "FOUR SECTIONS",
+                "nodes": [
+                    {"id": "ml", "title": "1 · Analytics & ML",
+                     "sub": "33 notebooks\nstats · ML · deep learning",
+                     "icons": ["python", "pandas", "scikitlearn"], "accent": PY},
+                    {"id": "bi", "title": "2 · Power BI",
+                     "sub": "6 pages · 36 tables\n37 DAX measures",
+                     "icons": ["powerbi", "dax"], "accent": PBI},
+                    {"id": "de", "title": "3 · Data Engineering",
+                     "sub": "7 projects\nELT · streaming · lakehouse",
+                     "icons": ["apacheairflow", "dbt", "apachekafka"],
+                     "accent": AIRFLOW},
+                    {"id": "gen", "title": "4 · Generative AI",
+                     "sub": "8 projects\nRAG · agents · apps",
+                     "icons": ["googlegemini", "langchain", "crewai"], "accent": GEN},
+                ],
+            },
+        ],
+    },
+
     # ------------------------------------------------------------------ 01 --
     {
         "slug": "01-analytics-ml-flow",
